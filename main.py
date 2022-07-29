@@ -33,5 +33,17 @@ def energy_electricity_get_the_list_of_countries_by_electricity_production_by_so
 @app.get("/energy/electricity/list_of_countries_by_renewable_electricity_production")
 def energy_electricity_get_the_list_of_countries_by_renewable_electricity_production():
     return electricity.get_the_list_of_countries_by_renewable_electricity_production()
+
+
+# Get the list of countries by renewable electricity imports
+@app.get("/energy/electricity/list_of_countries_by_electricity_imports")
+def energy_electricity_get_the_list_of_countries_by_electricity_imports():
+    return electricity.get_the_list_of_countries_by_electricity_imports()
+
+
+# Get the list of countries by renewable electricity exports
+@app.get("/energy/electricity/list_of_countries_by_electricity_exports")
+def energy_electricity_get_the_list_of_countries_by_electricity_exports():
+    return electricity.get_the_list_of_countries_by_electricity_exports()
 # Electricity
 # Energy
