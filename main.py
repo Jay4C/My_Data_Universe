@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from Service.Energy.Electricity import electricity
+from Service.Energy.Natural_Gas import natural_gas
 
 app = FastAPI()
 
@@ -46,4 +47,30 @@ def energy_electricity_get_the_list_of_countries_by_electricity_imports():
 def energy_electricity_get_the_list_of_countries_by_electricity_exports():
     return electricity.get_the_list_of_countries_by_electricity_exports()
 # Electricity
+
+
+# Natural gas
+# Get the list of countries by natural gas consumption
+@app.get("/energy/natural_gas/list_of_countries_by_natural_gas_consumption")
+def energy_natural_gas_get_the_list_of_countries_by_natural_gas_consumption():
+    return natural_gas.get_the_list_of_countries_by_natural_gas_consumption()
+
+
+# Get the list of countries by natural gas production
+@app.get("/energy/natural_gas/list_of_countries_by_natural_gas_production")
+def energy_natural_gas_get_the_list_of_countries_by_natural_gas_production():
+    return natural_gas.get_the_list_of_countries_by_natural_gas_production()
+
+
+# Get the list of countries by natural gas imports
+@app.get("/energy/natural_gas/list_of_countries_by_natural_gas_imports")
+def energy_natural_gas_get_the_list_of_countries_by_natural_gas_imports():
+    return natural_gas.get_the_list_of_countries_by_natural_gas_imports()
+
+
+# Get the list of countries by natural gas exports
+@app.get("/energy/natural_gas/list_of_countries_by_natural_gas_exports")
+def energy_natural_gas_get_the_list_of_countries_by_natural_gas_exports():
+    return natural_gas.get_the_list_of_countries_by_natural_gas_exports()
+# Natural gas
 # Energy
