@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from Service.Energy.Electricity import electricity
 from Service.Energy.Natural_Gas import natural_gas
+from Service.Energy.Coal import coal
 
 app = FastAPI()
 
@@ -50,6 +51,12 @@ def energy_electricity_get_the_list_of_countries_by_electricity_exports():
 
 
 # Natural gas
+# Get the list of countries by natural gas proven reserves
+@app.get("/energy/natural_gas/list_of_countries_by_natural_gas_proven_reserves")
+def energy_natural_gas_get_the_list_of_countries_by_natural_gas_proven_reserves():
+    return natural_gas.get_the_list_of_countries_by_natural_gas_proven_reserves()
+
+
 # Get the list of countries by natural gas consumption
 @app.get("/energy/natural_gas/list_of_countries_by_natural_gas_consumption")
 def energy_natural_gas_get_the_list_of_countries_by_natural_gas_consumption():
@@ -73,4 +80,36 @@ def energy_natural_gas_get_the_list_of_countries_by_natural_gas_imports():
 def energy_natural_gas_get_the_list_of_countries_by_natural_gas_exports():
     return natural_gas.get_the_list_of_countries_by_natural_gas_exports()
 # Natural gas
+
+
+# Coal
+# Get the list of countries by coal proven reserves
+@app.get("/energy/coal/list_of_countries_by_coal_proven_reserves")
+def energy_coal_get_the_list_of_countries_by_coal_proven_reserves():
+    return coal.get_the_list_of_countries_by_coal_proven_reserves()
+
+
+# Get the list of countries by coal consumption
+@app.get("/energy/coal/list_of_countries_by_coal_consumption")
+def energy_coal_get_the_list_of_countries_by_coal_consumption():
+    return coal.get_the_list_of_countries_by_coal_consumption()
+
+
+# Get the list of countries by coal production
+@app.get("/energy/coal/list_of_countries_by_coal_production")
+def energy_coal_get_the_list_of_countries_by_coal_production():
+    return coal.get_the_list_of_countries_by_coal_production()
+
+
+# Get the list of countries by natural gas imports
+@app.get("/energy/coal/list_of_countries_by_coal_imports")
+def energy_coal_get_the_list_of_countries_by_coal_imports():
+    return coal.get_the_list_of_countries_by_coal_imports()
+
+
+# Get the list of countries by natural gas exports
+@app.get("/energy/coal/list_of_countries_by_coal_exports")
+def energy_coal_get_the_list_of_countries_by_coal_exports():
+    return coal.get_the_list_of_countries_by_coal_exports()
+# Coal
 # Energy
