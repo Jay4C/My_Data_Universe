@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from Service.Energy.Electricity import electricity
 from Service.Energy.Natural_Gas import natural_gas
 from Service.Energy.Coal import coal
+from Service.Energy.Oil import oil
 
 app = FastAPI()
 
@@ -101,15 +102,53 @@ def energy_coal_get_the_list_of_countries_by_coal_production():
     return coal.get_the_list_of_countries_by_coal_production()
 
 
-# Get the list of countries by natural gas imports
+# Get the list of countries by coal imports
 @app.get("/energy/coal/list_of_countries_by_coal_imports")
 def energy_coal_get_the_list_of_countries_by_coal_imports():
     return coal.get_the_list_of_countries_by_coal_imports()
 
 
-# Get the list of countries by natural gas exports
+# Get the list of countries by coal exports
 @app.get("/energy/coal/list_of_countries_by_coal_exports")
 def energy_coal_get_the_list_of_countries_by_coal_exports():
     return coal.get_the_list_of_countries_by_coal_exports()
 # Coal
+
+
+# Oil
+# Get the list of countries by oil proven reserves
+@app.get("/energy/oil/list_of_countries_by_oil_proven_reserves")
+def energy_oil_get_the_list_of_countries_by_oil_proven_reserves():
+    return oil.get_the_list_of_countries_by_oil_proven_reserves()
+
+
+# Get the list of countries by oil consumption
+@app.get("/energy/oil/list_of_countries_by_oil_consumption")
+def energy_oil_get_the_list_of_countries_by_oil_consumption():
+    return oil.get_the_list_of_countries_by_oil_consumption()
+
+
+# Get the list of countries by oil production
+@app.get("/energy/oil/list_of_countries_by_oil_production")
+def energy_oil_get_the_list_of_countries_by_oil_production():
+    return oil.get_the_list_of_countries_by_oil_production()
+
+
+# Get the list of countries by oil imports
+@app.get("/energy/oil/list_of_countries_by_oil_imports")
+def energy_oil_get_the_list_of_countries_by_oil_imports():
+    return oil.get_the_list_of_countries_by_oil_imports()
+
+
+# Get the list of countries by oil exports
+@app.get("/energy/oil/list_of_countries_by_oil_exports")
+def energy_oil_get_the_list_of_countries_by_oil_exports():
+    return oil.get_the_list_of_countries_by_oil_exports()
+
+
+# Get the list of countries by oil
+@app.get("/energy/oil/list_of_countries_by_oil")
+def energy_oil_get_the_list_of_countries_by_oil():
+    return oil.get_the_list_of_countries_by_oil()
+# Oil
 # Energy
