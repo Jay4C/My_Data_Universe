@@ -3,6 +3,7 @@ from Service.Energy.Electricity import electricity
 from Service.Energy.Natural_Gas import natural_gas
 from Service.Energy.Coal import coal
 from Service.Energy.Oil import oil
+from Service.Energy.Uranium import uranium
 
 app = FastAPI()
 
@@ -151,4 +152,36 @@ def energy_oil_get_the_list_of_countries_by_oil_exports():
 def energy_oil_get_the_list_of_countries_by_oil():
     return oil.get_the_list_of_countries_by_oil()
 # Oil
+
+
+# Uranium
+# Get the list of countries by uranium proven reserves
+@app.get("/energy/uranium/list_of_countries_by_oil_proven_reserves")
+def energy_uranium_get_the_list_of_countries_by_uranium_proven_reserves():
+    return uranium.get_the_list_of_countries_by_uranium_proven_reserves()
+
+
+# Get the list of countries by uranium consumption
+@app.get("/energy/uranium/list_of_countries_by_uranium_consumption")
+def energy_uranium_get_the_list_of_countries_by_uranium_consumption():
+    return uranium.get_the_list_of_countries_by_uranium_consumption()
+
+
+# Get the list of countries by uranium production
+@app.get("/energy/uranium/list_of_countries_by_uranium_production")
+def energy_uranium_get_the_list_of_countries_by_uranium_production():
+    return uranium.get_the_list_of_countries_by_uranium_production()
+
+
+# Get the list of countries by uranium imports
+@app.get("/energy/uranium/list_of_countries_by_uranium_imports")
+def energy_uranium_get_the_list_of_countries_by_uranium_imports():
+    return uranium.get_the_list_of_countries_by_uranium_imports()
+
+
+# Get the list of countries by uranium exports
+@app.get("/energy/uranium/list_of_countries_by_uranium_exports")
+def energy_uranium_get_the_list_of_countries_by_uranium_exports():
+    return uranium.get_the_list_of_countries_by_uranium_exports()
+# Uranium
 # Energy
