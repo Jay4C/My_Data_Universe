@@ -5,6 +5,7 @@ from Service.Energy.Coal import coal
 from Service.Energy.Oil import oil
 from Service.Energy.Uranium import uranium
 from Service.Chemistry.Carbon_Dioxide import carbon_dioxide
+from Service.Chemistry.Chemicals import chemicals
 
 app = FastAPI()
 
@@ -194,4 +195,11 @@ def energy_uranium_get_the_list_of_countries_by_uranium_exports():
 def chemistry_carbon_dioxide_get_the_list_of_countries_by_carbon_dioxide_emissions():
     return carbon_dioxide.get_the_list_of_countries_by_carbon_dioxide_emissions()
 # Carbon dioxide
+
+
+# Chemicals
+@app.get("/chemistry/chemicals/get_the_list_of_chemical_elements")
+def chemistry_chemicals_get_the_list_of_chemical_elements():
+    return chemicals.get_the_list_of_chemical_elements()
+# Chemicals
 # Chemistry
