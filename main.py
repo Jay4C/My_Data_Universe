@@ -201,5 +201,10 @@ def chemistry_carbon_dioxide_get_the_list_of_countries_by_carbon_dioxide_emissio
 @app.get("/chemistry/chemicals/get_the_list_of_chemical_elements")
 def chemistry_chemicals_get_the_list_of_chemical_elements():
     return chemicals.get_the_list_of_chemical_elements()
+
+
+@app.get("/chemistry/chemicals/get_the_abundance_of_elements_in_earth_crust")
+def chemistry_chemicals_get_the_abundance_of_elements_in_earth_crust():
+    return chemicals.get_the_abundance_of_elements_in_earth_crust()
 # Chemicals
 # Chemistry
