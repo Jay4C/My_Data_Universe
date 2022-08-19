@@ -206,5 +206,10 @@ def chemistry_chemicals_get_the_list_of_chemical_elements():
 @app.get("/chemistry/chemicals/get_the_abundance_of_elements_in_earth_crust")
 def chemistry_chemicals_get_the_abundance_of_elements_in_earth_crust():
     return chemicals.get_the_abundance_of_elements_in_earth_crust()
+
+
+@app.get("/chemistry/chemicals/get_the_abundances_of_the_elements")
+def chemistry_chemicals_get_the_abundances_of_the_elements():
+    return chemicals.get_the_abundances_of_the_elements()
 # Chemicals
 # Chemistry
