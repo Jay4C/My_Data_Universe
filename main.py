@@ -6,6 +6,7 @@ from Service.Energy.Oil import oil
 from Service.Energy.Uranium import uranium
 from Service.Chemistry.Carbon_Dioxide import carbon_dioxide
 from Service.Chemistry.Chemicals import chemicals
+from Service.Tax_Haven import tax_haven
 
 app = FastAPI()
 
@@ -213,3 +214,10 @@ def chemistry_chemicals_get_the_abundances_of_the_elements():
     return chemicals.get_the_abundances_of_the_elements()
 # Chemicals
 # Chemistry
+
+
+# Tax haven
+@app.get("/tax_haven//")
+def tax_haven_():
+    return chemicals.get_the_abundances_of_the_elements()
+# Tax haven
